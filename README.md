@@ -2,9 +2,16 @@ custom fork of Cosmos SDK @ a specific commit + modifications that we utilize fo
 
 run benchmarks:
 ```
+# cosmos specific benchmarks
 cd cosmos-sdk
 make test-sim-profile test-sim-benchmark benchmark  # default uses leveldb
 ENABLE_ROCKSDB=rocksdb make test-sim-profile test-sim-benchmark benchmark   # use rocksdb
+
+# ethereum specific çbenchmarks
+cd ethermint
+make benchmark  # default uses leveldb
+ENABLE_ROCKSDB=rocksdb make benchmark   # use rocksdb
+
 ```
 
 To adjust length of sim tests
